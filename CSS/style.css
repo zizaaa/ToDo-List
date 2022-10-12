@@ -1,0 +1,1200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.landingpop {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    position: absolute;
+    opacity: 0.8;
+}
+
+.landingpop p {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.landingpop #userNn {
+    outline: none;
+    border: none;
+    padding-left: 3px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    height: 30px;
+    width: 18em;
+}
+
+.landingpop #setNn {
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 10px;
+    height: 30px;
+    width: 5em;
+}
+
+.landingpop #setNn:hover {
+    background-color: rgb(218, 214, 214);
+    transition: 1s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(241, 197, 109);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-bottom: 45px;
+    padding-top: 10px;
+}
+
+@media(max-width:873px) {
+    .container .header .text,
+    .container .header .addTodo {
+        margin-top: 10px;
+    }
+    .container .header .addTodo {
+        width: 8%;
+    }
+}
+
+@media(max-width:1170px) {
+    .container2 .todos {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 24em 24em 24em;
+        column-gap: 5px;
+        row-gap: 10px;
+    }
+    .container .header .text-title {
+        padding-left: 5px;
+    }
+    .container .header .text {
+        padding-left: 5px;
+    }
+}
+
+@media(max-width:800px) {
+    .container2 .todos {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 24em 24em;
+        column-gap: 5px;
+        row-gap: 10px;
+    }
+    .pinned-task .pinned {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .container .header .text-title {
+        width: 70%;
+        margin-top: 5%;
+        padding: 7px 5px 7px 5px;
+    }
+    .container .header .text {
+        width: 70%;
+        padding: 7px 5px 7px 5px;
+    }
+}
+
+@media(max-width:600px) {
+    .container {
+        width: 100%;
+        height: 100vh;
+    }
+    .container2 .pop-up {
+        top: 35%;
+        left: 20%;
+        bottom: 20%;
+        right: 20%;
+        transform: scale(0);
+    }
+    .container2 .todos {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 18em 18em;
+        column-gap: 5px;
+        row-gap: 10px;
+    }
+    .container .header .text-title {
+        width: 70%;
+        margin-top: 10%;
+        padding: 7px 5px 7px 5px;
+    }
+    .container .header .text {
+        width: 70%;
+        padding: 7px 5px 7px 5px;
+    }
+    .container .message-pop-up .message-pop-up-container {
+        width: 100%;
+    }
+}
+
+@media(max-width:546px) {
+    .landingpop p {
+        text-align: center;
+    }
+}
+
+@media(max-width:500px) {
+    .container .header .text-title {
+        width: 70%;
+        margin-top: 10%;
+        padding: 7px 5px 7px 5px;
+    }
+    .container .header .text {
+        width: 70%;
+        padding: 7px 5px 7px 5px;
+    }
+    .container .header .addTodo {
+        width: 13%;
+    }
+    .container2 .todos {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .container {
+        padding-bottom: 50px;
+    }
+    .pinned-task .pinned {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-height: 550px) {
+    .container .header {
+        height: 89vh;
+    }
+}
+
+@media(max-height: 537px) {
+    .container .header .text-title {
+        margin-top: 30px;
+    }
+}
+
+@media(max-height: 526px) {
+    .container .header .text-title {
+        margin-top: 50px;
+    }
+}
+
+@media(max-height: 483px) {
+    .container .header {
+        height: 88vh;
+    }
+    .container .pinned-task {
+        height: 89vh;
+    }
+}
+
+@media(max-height: 453px) {
+    .container .header {
+        height: 87vh;
+    }
+    .container .header .text-title {
+        margin-top: 80px;
+    }
+}
+
+@media(max-height: 402px) {
+    .container .header {
+        height: 85vh;
+    }
+    .container .header .text-title {
+        margin-top: 90px;
+    }
+    .container .pinned-task {
+        height: 87vh;
+    }
+}
+
+@media(max-height: 352px) {
+    .container .header {
+        height: 83vh;
+    }
+    .container .header .text-title {
+        margin-top: 70px;
+    }
+}
+
+@media(max-width:295px) {
+    .landingpop p {
+        color: white;
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+    .landingpop #userNn {
+        height: 30px;
+        width: 80%;
+    }
+    .landingpop #setNn {
+        cursor: pointer;
+        font-weight: 700;
+        border-radius: 10px;
+        height: 30px;
+        width: 5em;
+    }
+}
+
+.header {
+    background-color: rgb(241, 197, 109);
+    width: 100%;
+    height: 91vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+}
+
+.header .inputs p {
+    color: red;
+    font-size: .8rem;
+}
+
+.backButton {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.4rem;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+}
+
+.header h3 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.inputs {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .text-title {
+    width: 50%;
+    height: 35px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    background-color: transparent;
+    box-shadow: 1px 2px 2px 1px rgb(177, 144, 80);
+}
+
+.header .text {
+    width: 50%;
+    height: 35px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    box-shadow: 1px 2px 2px 1px rgb(177, 144, 80);
+}
+
+.text::placeholder,
+.text-title::placeholder {
+    font-size: 1rem;
+    color: black;
+}
+
+.text:focus,
+.text-title:focus {
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+    box-shadow: 2px 3px 5px inset;
+}
+
+.header .addTodo {
+    height: 30px;
+    width: 5%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(255, 207, 110);
+    cursor: pointer;
+    flex-shrink: 0;
+    box-shadow: 1px 2px 2px 1px rgb(177, 144, 80);
+}
+
+.header .addTodo:hover {
+    transition: 1s;
+    background-color: rgb(233, 200, 133);
+}
+
+.header .addTodo:focus {
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 3px 5px inset;
+}
+
+.pinned-task {
+    background-color: rgb(241, 197, 109);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 91vh;
+    transform: scale(0);
+    padding-top: 50px;
+    overflow-y: scroll;
+}
+
+.pinned {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+    row-gap: 5px;
+    list-style: none;
+}
+
+.backNote {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    color: rgb(248, 231, 196);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    top: 50px;
+    bottom: 50px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* ================ */
+
+.todo-title {
+    padding-left: 10px;
+}
+
+.container2 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 1px;
+    background-color: transparent;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    box-shadow: transparent;
+    border-radius: 1px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(253, 204, 161);
+}
+
+
+/*Scroll Corner */
+
+::-webkit-scrollbar-corner {
+    height: 3px;
+}
+
+.container2 .todos {
+    list-style: none;
+}
+
+.todos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20em 20em 20em 24em;
+    column-gap: 5px;
+    row-gap: 10px;
+}
+
+.todo-container {
+    background-color: rgb(255, 220, 190);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 10px;
+    align-items: center;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow-wrap: break-word;
+    position: relative;
+}
+
+.todo-Lii {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    background-color: rgb(252, 192, 141);
+}
+
+.todo-Li {
+    margin-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: inline-block;
+    overflow-wrap: break-word;
+    padding-bottom: 20px;
+}
+
+.buttonDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgb(221, 192, 166);
+    background-color: rgb(255, 220, 190);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.editBtn {
+    height: 30px;
+    width: 50%;
+    border: none;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(255, 220, 190);
+    border-bottom-left-radius: 5px;
+}
+
+.editBtn:hover {
+    background-color: rgb(255, 192, 133);
+    transition-duration: 1s;
+}
+
+.deleteBtn {
+    height: 30px;
+    width: 50%;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: 1px solid gray;
+    cursor: pointer;
+    background-color: rgb(255, 220, 190);
+    border-bottom-right-radius: 5px;
+}
+
+.deleteBtn:hover {
+    background-color: rgb(255, 192, 133);
+    transition-duration: 1s;
+}
+
+.pinBtn {
+    height: 30px;
+    width: 50%;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: 1px solid gray;
+    cursor: pointer;
+    background-color: rgb(255, 220, 190);
+    border-bottom-right-radius: 5px;
+}
+
+.pinBtn:hover {
+    background-color: rgb(255, 192, 133);
+    transition-duration: 1s;
+}
+
+.fa-pen,
+.fa-check,
+.fa-plus,
+.fa-plus,
+.fa-arrow-left,
+.fa-thumbtack,
+.fa-calendar-days,
+.fa-xmark {
+    pointer-events: none;
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(243, 186, 71);
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.menu button {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.menu .addButton {
+    background-color: transparent;
+    padding: 7px 10px;
+    border-radius: 20%;
+    background-color: rgb(255, 207, 110);
+    cursor: pointer;
+    box-shadow: 1px 2px 2px 1px rgb(177, 144, 80);
+}
+
+
+/* Calendar */
+
+.popup-calendar-container {
+    width: 100%;
+    height: 91vh;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    transform: scale(0);
+    background-color: rgb(241, 197, 109);
+}
+
+@media(max-width:927px) {
+    .popup-calendar-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .popup-calendar-container .calendar {
+        width: 99%;
+        padding: 3em 0;
+        margin-left: 3px;
+        margin-top: 10px;
+        border-radius: 10px;
+        height: 40vh;
+    }
+    .popup-calendar-container .calendar span {
+        font-size: .8em;
+    }
+    .popup-calendar-container .calendar .today-quotes p {
+        font-size: .7em;
+    }
+    .popup-calendar-container .calendar .date-quotes-container {
+        width: 80%;
+    }
+    .popup-calendar-container .event-container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        overflow-y: scroll;
+    }
+    .popup-calendar-container .event-container .addEvent {
+        position: absolute;
+        top: 0;
+    }
+    .popup-calendar-container .event-container .event-list {
+        padding: 20px 0;
+        height: 35vh;
+    }
+}
+
+@media(max-width:589px) {
+    .popup-calendar-container .calendar .date-quotes-container .dates {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width:493px) {
+    .popup-calendar-container .calendar .date-quotes-container .dates {
+        text-align: center;
+        font-size: 2.3rem;
+    }
+    .popup-calendar-container .calendar .date-quotes-container .date-container {
+        border: none;
+    }
+    .popup-calendar-container .calendar .date-quotes-container .today-quotes {
+        text-align: center;
+        border-top: 1px solid black;
+        padding-top: 5px;
+    }
+}
+
+@media(max-height:554px) {
+    .popup-calendar-container {
+        display: flex;
+        flex-direction: column;
+        height: 88vh;
+        overflow-y: scroll;
+    }
+}
+
+.calendar {
+    width: 37em;
+    height: 85vh;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    box-shadow: 1px 2px 2px 1px rgb(177, 144, 80);
+    transition: 2s;
+    margin-left: 10px;
+}
+
+.today-quotes {
+    width: 90%;
+}
+
+.event-backButton {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.4rem;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+}
+
+.date-quotes-container {
+    background-color: rgb(250, 213, 167);
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 15em;
+    border: 1px solid black;
+    border: none;
+    border-end-start-radius: 3em;
+    border-start-end-radius: 3em;
+}
+
+.date-container {
+    height: 5em;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.date-container p {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-shadow: 2px 6px 5px gray;
+}
+
+.today-quotes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.today-quotes p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-container {
+    flex: 1;
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.event-list-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 5em;
+}
+
+.event-list-header p {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-left: 3px;
+}
+
+.event-list-header button {
+    cursor: pointer;
+    padding: .5rem .7rem;
+    border: 1px solid black;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.event-list {
+    height: 91vh;
+    overflow-y: scroll;
+}
+
+.addEvent {
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    z-index: 0;
+    width: 100%;
+    height: 83vh;
+    top: 4em;
+    right: 0;
+}
+
+.addEvent .userEventInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(241, 197, 109);
+    border: none;
+    box-shadow: 1px 2px 2px 1px rgb(177, 144, 80);
+    border-radius: 10px;
+    width: 70%;
+    height: 20em;
+    position: relative;
+}
+
+.error-messages {
+    margin-top: 10px;
+}
+
+.addEvent .userEventInput p {
+    color: red;
+    font-size: .8rem;
+    display: flex;
+    justify-content: center;
+}
+
+.title-warning-text {
+    transform: scale(0);
+}
+
+.description-warning-text {
+    transform: scale(0);
+}
+
+.date-warning-text {
+    transform: scale(0);
+}
+
+.addEvent .userEventInput input {
+    width: 90%;
+    height: 3em;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    box-shadow: 1px 2px 2px 1px rgb(177, 144, 80);
+}
+
+input::placeholder {
+    color: black;
+}
+
+.addEvent .userEventInput .eventTitle {
+    margin-bottom: 10px;
+}
+
+.addEvent .userEventInput .eventTitle:focus {
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 3px 5px inset;
+}
+
+.addEvent .userEventInput .eventDescription {
+    margin-bottom: 10px;
+}
+
+.addEvent .userEventInput .eventDate {
+    margin-bottom: 10px;
+}
+
+.addEvent .userEventInput .eventDescription:focus {
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 3px 5px inset;
+}
+
+.addEvent .userEventInput .eventSaveBtn {
+    border: none;
+    cursor: pointer;
+    padding: .4rem .8rem;
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow: 1px 2px 2px 1px rgb(177, 144, 80);
+}
+
+.addEvent .userEventInput .eventform-backButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 1px 6px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px 1px rgb(177, 144, 80);
+}
+
+
+/*  */
+
+.event-container .event-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.event-container .event-list .eventDivContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    transition: .6s;
+}
+
+.event-container .event-list .eventDivContainer .events-Div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    min-height: 10rem;
+    max-height: 15rem;
+    border-radius: 10px;
+    background-color: rgb(255, 228, 196);
+    border: 1px solid black;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    overflow-wrap: break-word;
+    position: relative;
+}
+
+.event-container .event-list .eventDivContainer .events-Div .event-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.event-container .event-list .eventDivContainer .events-Div .event-description {
+    width: 100%;
+    border-top: 1px solid black;
+    position: absolute;
+    top: 3em;
+    left: 3px;
+    right: 0;
+    padding-top: 5px;
+    overflow-wrap: break-word;
+    height: auto;
+}
+
+.event-container .event-list .eventDivContainer .extraDiv {
+    width: 1%;
+    height: 4em;
+    border: 1px;
+    border-left-style: dashed;
+}
+
+.event-container .event-list .eventDivContainer .dueDate-Div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 3em;
+    border: 1px solid black;
+    background-color: rgb(255, 228, 196);
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+}
+
+.event-container .event-list .eventDivContainer .dueDate-Div .event-delete-btn {
+    position: absolute;
+    right: -8px;
+    top: -9px;
+    padding: 1px 4px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* message form */
+
+.message-pop-up {
+    background-color: rgb(241, 197, 109);
+    width: 100%;
+    height: 91vh;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+}
+
+.message-pop-up-container {
+    background-color: transparent;
+    width: 55%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px 1px rgb(177, 144, 80);
+}
+
+.message-pop-up .message-pop-up-container h1 {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.message-pop-up .message-pop-up-container .user-name {
+    width: 51%;
+    height: 3em;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    padding-left: 5px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 2px 2px 1px rgb(177, 144, 80);
+    background-color: transparent;
+}
+
+.message-pop-up .message-pop-up-container .user-name:focus,
+.message-pop-up .message-pop-up-container .select select:focus,
+.message-pop-up .message-pop-up-container .user-message:focus,
+.new-input .crushName:focus,
+.new-input .crushContact:focus {
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 3px 5px inset;
+}
+
+.message-pop-up .message-pop-up-container .select {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    width: 51%;
+}
+
+.message-pop-up .message-pop-up-container .select p {
+    margin-right: 10px;
+}
+
+.message-pop-up .message-pop-up-container .select select {
+    outline: none;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 2px 2px 1px rgb(177, 144, 80);
+    background-color: transparent;
+}
+
+.message-pop-up .message-pop-up-container .user-message {
+    outline: none;
+    padding-left: 5px;
+    padding-top: 3px;
+    border-radius: 10px;
+    min-width: 51%;
+    max-width: 51%;
+    min-height: 7em;
+    max-height: 14em;
+    border: none;
+    box-shadow: 1px 2px 2px 1px rgb(177, 144, 80);
+    background-color: transparent;
+}
+
+.message-pop-up .message-pop-up-container .user-message::placeholder {
+    color: black;
+}
+
+.send-message-btn {
+    margin-top: 10px;
+    padding: .5em 1em;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px 2px 2px 1px rgb(177, 144, 80);
+    background-color: transparent;
+}
+
+.new-input {
+    width: 51%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.new-input .crushName {
+    width: 100%;
+    height: 3em;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 2px 2px 1px rgb(177, 144, 80);
+    background-color: transparent;
+}
+
+.new-input .crushContact {
+    width: 100%;
+    height: 3em;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 2px 2px 1px rgb(177, 144, 80);
+    background-color: transparent;
+}
+
+
+/*  */
+
+.setting-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+    background-color: rgb(241, 197, 109);
+}
+
+.setting-container .theme-container {
+    width: 80%;
+    height: 85vh;
+    overflow-y: scroll;
+    border-radius: 20px;
+}
+
+.setting-container .theme-container .theme .themes-container {
+    width: 100%;
+    height: 10em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.setting-container .theme-container .theme .themes-container .color {
+    width: 90%;
+    height: 9em;
+    box-shadow: 2px 1px 9px 1px rgb(196, 166, 128);
+}
+
+.setting-container .theme-container .theme .themes-container .radio {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.setting-container .theme-container .theme .themes-container .dark-theme {
+    background-color: rgb(36, 35, 35);
+    border: none;
+    border-radius: 10px;
+}
+
+.setting-container .theme-container .theme .themes-container .light-theme {
+    background-color: rgb(247, 247, 247);
+    border: none;
+    border-radius: 10px;
+}
+
+.setting-container .theme-container .theme .themes-container .purple-theme {
+    background-color: rgb(255, 174, 255);
+    border: none;
+    border-radius: 10px;
+}
+
+.setting-container .theme-container .theme .themes-container .pink-theme {
+    background-color: rgb(255, 190, 201);
+    border: none;
+    border-radius: 10px;
+}

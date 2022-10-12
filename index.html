@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <!-- Pop up Landing page username input-->
+    <div class="landingpop">
+        <p>Hello, please set your name/nickname</p>
+        <input id="userNn" type="text" placeholder="Enter your name or nickname">
+        <button id="setNn" onclick="setUserNn()">Save</button>
+    </div>
+
+    <div class="container">
+        <!-- Userinput, Add task -->
+        <div class="header">
+            <button class="backButton" onclick="back()"><i class="fa-solid fa-arrow-left" id="header-backArrow"></i>
+            </button>
+            <h3>Hello, <span class="userName">Name</span>.</h3>
+            <div class="inputs">
+                <input class="text-title" type="text" placeholder="Task Title">
+                <p class="task-title-warning"></p>
+                <input class="text" type="text" placeholder="Enter Task">
+                <p class="task-warning"></p>
+                <button id="todoBtn" class="addTodo" onclick="addTodos()">Save</button>
+            </div>
+        </div>
+
+        <!-- Pinned task -->
+        <div class="pinned-task">
+            <button class="backButton" onclick="back()"><i class="fa-solid fa-arrow-left" id="backArrow"></i></button>
+            <p class="backNote">No pinned task</p>
+            <ul class="pinned">
+            </ul>
+        </div>
+
+        <!-- calendar/events -->
+        <div class="popup-calendar-container">
+
+            <div class="calendar">
+                <button class="event-backButton" onclick="back()"><i class="fa-solid fa-arrow-left" id="event-backArrow"></i></button>
+                <div class="date-quotes-container">
+                    <div class="date-container">
+                        <p class="dates"><span class="month"></span> <span class="date"></span>,<span class="year"></span></p>
+                    </div>
+                    <div class="today-quotes">
+                        <p class="quotes">"Don't focus on the pain, Focus on the Progress"</p>
+                        <br>
+                        <p class="author">-Dwayne Johnson</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event-container">
+                <div class="event-list-header">
+                    <p>Events</p>
+                    <button onclick="addEvent()">Add Event</button>
+                </div>
+                <div class="event-list"></div>
+                <!-- add event -->
+                <div class="addEvent">
+                    <div class="userEventInput">
+                        <button class="eventform-backButton" onclick="hideEventform()"><i class="fa-solid fa-xmark"></i></button>
+                        <input class="eventTitle" type="text" placeholder="Event Title">
+                        <p class="title-warning-text"></p>
+                        <input class="eventDescription" type="text" placeholder="Description">
+                        <p class="description-warning-text"></p>
+                        <input type="date" class="eventDate">
+                        <p class="date-warning-text"></p>
+                        <button class="eventSaveBtn" onclick="saveEvent()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Send message to someone -->
+        <div class="message-pop-up">
+            <button class="event-backButton" onclick="back()"><i class="fa-solid fa-arrow-left"></i></button>
+            <form class="message-pop-up-container" name="form" netlify>
+                <h1>Send Message</h1>
+                <input class="user-name" name="Name" placeholder="Your name" required>
+                <div class="select">
+                    <p>To:</p>
+                    <select id="receiver" name="select" required>
+                            <!-- <option value="none" name="none">Select</option>
+                            <option value="crush" name="crush">Crush</option> -->
+                            <option value="developer" name="developer">Developer</option>
+                            <!-- <option value="others" name="other">Others</option> -->
+                        </select>
+                </div>
+                <!-- <div class="new-input"></div> -->
+                <textarea class="user-message" placeholder="Message" name="meessage" required></textarea>
+                <button class="send-message-btn">Send</button>
+            </form>
+        </div>
+
+        <!-- Settings -->
+        <div class="setting-container">
+            <button class="event-backButton" onclick="back()"><i class="fa-solid fa-arrow-left"></i></button>
+            <div class="theme-container">
+
+            </div>
+            <div class="dev-container">
+
+            </div>
+        </div>
+
+        <!-- Display task -->
+        <div class="container2">
+            <ul class="todos">
+            </ul>
+        </div>
+
+        <!-- footer menu -->
+        <div class="menu">
+            <button class="pinButton" onclick="pinnedTask()" alt="pin"><i class="fa-solid fa-thumbtack" alt="pinned" id="pinBtn"></i></button>
+            <button class="addButton" id="addButton" onclick="displayInputs()" alt="Add"><i class="fa-solid fa-plus" alt="add" id="addBtn"></i></button>
+            <button onclick="displayEvents()"><i class="fa-solid fa-calendar-days" alt="events" id="calBtn"></i></button>
+
+            <!-- <button onclick="displayMessage()"><i class="fa-solid fa-message" alt="message" id="mesBtn"></i></button>
+            <button onclick="settings()"><i class="fa-solid fa-gear" alt="settings" id="settBtn"></i></button> -->
+        </div>
+    </div>
+
+    <script src="JS/index.js"></script>
+</body>
+
+</html>
